@@ -22,6 +22,7 @@ import { z } from "zod";
 import { useCreateWorkspace } from "../api/use-create-workspace";
 import { createWorkspaceSchema } from "../schemas";
 import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 interface CreateWorkspaceFormProps {
   onCancel?: () => void;
@@ -153,6 +154,7 @@ const CreateWorkspaceForm = ({ onCancel }: CreateWorkspaceFormProps) => {
                   variant="secondary"
                   onClick={onCancel}
                   disabled={isPending}
+                  className={cn(!onCancel && "invisible")}
                 >
                   Cancel
                 </Button>
