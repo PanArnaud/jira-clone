@@ -6,11 +6,12 @@ export enum TaskStatus {
   IN_PROGRESS = "IN_PROGRESS",
   IN_REVIEW = "IN_REVIEW",
   DONE = "DONE",
-};
+}
 
 export type Task = Models.Document & {
   name: string;
   status: TaskStatus;
+  workspaceId: string;
   assigneeId: string;
   projectId: string;
   position: string;
