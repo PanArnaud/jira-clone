@@ -24,7 +24,7 @@ export const useDeleteTask = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to delete project");
+        throw new Error("Failed to delete task");
       }
 
       return await response.json();
@@ -37,7 +37,7 @@ export const useDeleteTask = () => {
       queryClient.invalidateQueries({ queryKey: ["task", data.$id] });
     },
     onError: () => {
-      toast.error("Failed to delete project");
+      toast.error("Failed to delete task");
     },
   });
 

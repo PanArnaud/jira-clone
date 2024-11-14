@@ -25,7 +25,7 @@ export const useUpdateTask = () => {
       });
 
       if (!response.ok) {
-        throw new Error("Failed to update project");
+        throw new Error("Failed to update task");
       }
 
       return await response.json();
@@ -38,7 +38,7 @@ export const useUpdateTask = () => {
       queryClient.invalidateQueries({ queryKey: ["task", data.$id] });
     },
     onError: () => {
-      toast.error("Failed to update project");
+      toast.error("Failed to update task");
     },
   });
 

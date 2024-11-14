@@ -85,7 +85,7 @@ const TaskActions = ({ id, projectId, children }: TaskActionsProps) => {
             className="text-amber-700 focus:text-amber-700 font-medium p-[10px]"
           >
             <TrashIcon className="size-4 mr-2 stroke-2" />
-            Delete Details
+            Delete Task
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
