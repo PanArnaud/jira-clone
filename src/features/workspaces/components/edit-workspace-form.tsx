@@ -71,16 +71,9 @@ const EditWorkspaceForm = ({
 
     if (!ok) return;
 
-    deleteWorkspace(
-      {
-        param: { workspaceId: initialValues.$id },
-      },
-      {
-        onSuccess: () => {
-          window.location.href = "/";
-        },
-      }
-    );
+    deleteWorkspace({
+      param: { workspaceId: initialValues.$id },
+    });
   };
 
   const handleResetInviteCode = async () => {
