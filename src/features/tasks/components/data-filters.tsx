@@ -101,7 +101,7 @@ export const DataFilters = ({ hideProjectFilter }: DataFiltersProps) => {
         </SelectContent>
       </Select>
 
-      <Select
+      {!hideProjectFilter && <Select
         defaultValue={projectId ?? undefined}
         onValueChange={(value) => onProjectIdChange(value)}
       >
@@ -120,7 +120,7 @@ export const DataFilters = ({ hideProjectFilter }: DataFiltersProps) => {
             </SelectItem>
           ))}
         </SelectContent>
-      </Select>
+      </Select>}
 
       <DatePicker
         placeholder="Due date"
