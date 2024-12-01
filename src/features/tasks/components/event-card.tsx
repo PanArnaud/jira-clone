@@ -6,10 +6,11 @@ import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { TaskStatus } from "../types";
+import { Member } from "@/features/members/types";
 
 interface EventCardProps {
   title: string;
-  assignee: any;
+  assignee: Member;
   project: Project;
   status: TaskStatus;
   id: string;
